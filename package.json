@@ -1,7 +1,7 @@
 {
-  "name": "svelte-apexcharts",
-  "repository": "https://github.com/galkatz373/svelte-apexcharts",
-  "version": "1.0.02",
+  "name": "@edde746/svelte-apexcharts",
+  "repository": "https://github.com/edde746/svelte-apexcharts",
+  "version": "1.0.09",
   "scripts": {
     "build": "svelte-kit package",
     "publish": "svelte-kit package && cd package && npm publish",
