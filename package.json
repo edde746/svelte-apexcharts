@@ -1,25 +1,25 @@
 {
   "name": "@edde746/svelte-apexcharts",
-  "repository": "https://github.com/edde746/svelte-apexcharts",
-  "version": "1.0.09",
+  "version": "1.0.11",
   "scripts": {
-    "build": "svelte-kit build && svelte-kit package",
-    "publish": "svelte-kit build && svelte-kit package && cd package && npm publish",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+    "dev": "vite dev",
+    "build": "svelte-kit sync && svelte-package",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@sveltejs/package": "next",
     "svelte": "^3.44.0",
-    "svelte-check": "^2.2.6",
-    "svelte-preprocess": "^4.10.1",
-    "svelte2tsx": "^0.5.9",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
     "tslib": "^2.3.1",
-    "typescript": "~4.6.2"
+    "typescript": "^4.7.4",
+    "vite": "^3.1.0"
   },
   "type": "module",
   "dependencies": {
-    "apexcharts": "^3.35.2"
+    "apexcharts": "^3.35.5"
   }
 }

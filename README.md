@@ -1,61 +1,38 @@
-<p align="center"><img src="https://apexcharts.com/media/apexcharts-logo.png"></p>
+# create-svelte
 
-<p align="center">
-  <a href="https://github.com/apexcharts/react-apexcharts/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a>
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-<p align="center">Svelte wrapper for <a href="https://github.com/apexcharts/apexcharts.js">ApexCharts</a> to build interactive visualizations in svelte.</p>
+## Creating a project
 
-<p align="center"><a href="https://apexcharts.com/react-chart-demos/"><img src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
-
-## Download and Installation
-
-##### Installing via npm
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-npm install @edde746/svelte-apexcharts
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## Usage
+## Developing
 
-```js
-<script>
-  import Chart from '@edde746/svelte-apexcharts/Chart.svelte';
-  let options = {
-    chart: {
-      type: "bar",
-    },
-    series: [
-      {
-        name: "sales",
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
-      },
-    ],
-    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-    },
-  };
-</script>
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-<Chart {options} />
+```bash
+npm run dev
 
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-This will render the following chart
+## Building
 
-<p align="center"><a href="https://apexcharts.com/javascript-chart-demos/column-charts/"><img src="https://apexcharts.com/media/first-bar-chart.svg"></a></p>
+To create a production version of your app:
 
-### How do I update the chart?
+```bash
+npm run build
+```
 
-Simple! Just change the `options` and it will automatically re-render the chart.
+You can preview the production build with `npm run preview`.
 
-<p align="center"><a href="#"><img src="https://apexcharts.com/media/react-chart-updation.gif"></a></p>
-
-## Props
-
-| Prop        | Type   | Description                                                                                                 |
-| ----------- | ------ | ----------------------------------------------------------------------------------------------------------- |
-| **options** | Object | The configuration object, see options on [API (Reference)](https://apexcharts.com/docs/options/chart/type/) |
-
-## License
-
-Svelte-ApexCharts is released under MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
