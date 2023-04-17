@@ -1,6 +1,8 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, createEventDispatcher } from 'svelte';
   import type { ApexOptions } from 'apexcharts';
+
+  const dispatch = createEventDispatcher();
 
   let chartNode: HTMLElement, chart: any;
   export let options: ApexOptions;
